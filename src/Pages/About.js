@@ -1,13 +1,14 @@
-import React from 'react';
-import Nav from "../component/Nav"
+import React from "react";
+import Abouts from "../component/About";
 
 const About = () => {
   return (
     <div>
-      <Nav/>
-       <h1>About Pages</h1>
+      <center>
+        <Abouts /> {/* Here, you call the About component */}
+      </center>
     </div>
   );
-}
+};
 
 export default About;

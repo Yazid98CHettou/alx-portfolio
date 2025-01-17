@@ -1,0 +1,22 @@
+.auth-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.toggle-button {
+  margin-top: 20px;
+  padding: 10px 15px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #6c757d;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+.toggle-button:hover {
+  background-color: #5a6268;
+}

@@ -1,13 +1,15 @@
-import React from 'react';
-import Nav from "../component/Nav"
+import React from "react";
+import Helps from "../component/Help";
 
 const Help = () => {
   return (
     <div>
-      <Nav/>
-      <h1>Help Pages</h1>
+      <center>
+          
+        <Helps />
+      </center>
     </div>
   );
-}
+};
 
 export default Help;

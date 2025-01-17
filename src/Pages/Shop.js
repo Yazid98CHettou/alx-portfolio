@@ -1,12 +1,9 @@
 import React from 'react';
-import Nav from "../component/Nav"
-const Shop = () => {
+function Shop() {
   return (
-    <div>
-      <Nav/>
-      <h1>Shop Pages</h1>
-    </div>
-  );
+    <>
+     <h1>Shop</h1>
+    </>
+  )
 }
-
 export default Shop;

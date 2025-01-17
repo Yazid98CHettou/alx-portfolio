@@ -1,13 +1,12 @@
+// Cart.js
 import React from 'react';
-import Nav from "../component/Nav"
 
-const Cart = () => {
+function Cart() {
   return (
-    <div>
-      <Nav/>
-      <h1>Cart Pages</h1>
-    </div>
-  );
+    <h1>Welcome to the Cart Page</h1>
+  )
+  
+  
 }
 
 export default Cart;

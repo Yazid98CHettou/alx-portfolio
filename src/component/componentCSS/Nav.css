@@ -1,0 +1,103 @@
+.sidebar {
+  width: 80px; 
+  background-color: #f1efef;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: width 0.3s ease-in-out;
+  position: fixed;
+  top: 0px;;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  border-radius: 15px;
+  z-index: 1;
+}
+
+.sidebar:hover {
+  width: 210px; /* Expanded width */
+  opacity: 1;
+  visibility: visible;
+}
+.sub-sidebar:hover {
+  width: 210px; /* Expanded width */
+  opacity: 1;
+  visibility: visible;
+}
+.profile-section {
+  text-align: center;
+  padding: 15px 0;
+}
+
+.menu-list {
+  align-items: center;
+  list-style: none;
+  margin-left: 0px;
+  padding-left: 15px;
+  z-index: 1;
+}
+
+.menu-item {
+  
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  color: #333;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menu-item i {
+  text-align: left;
+  font-size: 20px;
+  margin-right: 0px;
+  z-index: 1;
+}
+
+.menu-item:hover {
+  background-color: rgb(45, 121, 235);
+  color:white;
+  width: 190px;
+  border-radius: 12px;
+  animation-name: example;
+  animation-duration: 3s;
+  z-index: 1;
+
+}
+@keyframes example {
+  from {background-color: rgb(45, 121, 235);}
+  to {background-color: red;}
+}
+.menu-text {
+  white-space: nowrap;
+  margin-left: 25px;
+  opacity: 0;
+  visibility: hidden;
+  color:inherit;
+  font-weight: bold;
+  text-decoration: none;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.sidebar:hover .menu-text {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+}
+.greeting {
+  font-size: 15px;
+  /*white-space: nowrap;*/
+  margin-top: 10px;
+  color: #333;
+  z-index: 1;
+}
+
+/*****************************           ******************/
+.Desktop {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Moves the image to the center */
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
