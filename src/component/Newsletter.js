@@ -5,7 +5,6 @@ const NewsletterForm = () => {
   return (
       <>
         <center>
-          <h1>Newsletter</h1>
           <div className="newsletter-container">
       <h2>Subscribe to Our Newsletter</h2>
       <p>Stay updated with the latest news and offers.</p>

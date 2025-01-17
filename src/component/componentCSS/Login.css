@@ -1,18 +1,21 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
+
 .login-container {
+  border: none;
   width: 100%;
   max-width: 400px;
-  margin: 50px auto;
+  margin-top: -31px;
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #e4c6c6;
+  background-color: rgba(255, 252, 252, 0.4);
 }
 
-.signup-container h2 {
+.login-container h2 {
   text-align: center;
   margin-bottom: 20px;
-  color: #333;
+  color: #f3f0f0;
 }
 
 .form-group {
@@ -23,17 +26,20 @@
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
-  color: #555;
+  color: #5a5959;
   text-align: left; /* Ensure label is aligned to the left */
+  
 }
 
 .form-group input {
+  opacity: 0.8;
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
   border-radius: 20px;
+  
 }
 
 .login-button {

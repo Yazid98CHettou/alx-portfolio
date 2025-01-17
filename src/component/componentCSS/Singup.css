@@ -1,18 +1,20 @@
 .signup-container {
   width: 100%;
+  border: none;
   max-width: 400px;
-  margin: 50px auto;
+  margin-top: -31px;
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #e4c6c6;
+  background-color: rgba(255, 252, 252, 0.4);
 }
 
 .signup-container h2 {
   text-align: center;
   margin-bottom: 20px;
-  color: #333;
+  color: #f8f7f7;
+  font-family: "Roboto", sans-serif;
 }
 
 .form-group {
@@ -21,21 +23,24 @@
 
 .form-group label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 1px;
+  margin-top:-15px; 
   font-weight: bold;
-  color: #555;
-  text-align: left; /* Ensure label is aligned to the left */
+  color: #fdfdfd;
+  font-family: "Roboto", sans-serif;
+  /*text-align: left;  Ensure label is aligned to the left */
 }
 
 .form-group input {
   width: 100%;
   padding: 10px;
+  margin-top: -15px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
   border-radius: 20px;
 }
-
+ 
 .signup-button {
   width: 100%;
   padding: 10px;
@@ -46,6 +51,7 @@
   cursor: pointer;
   font-size: 16px;
   border-radius: 20px;
+  font-family: "Roboto", sans-serif;
 }
 
 .signup-button:hover {

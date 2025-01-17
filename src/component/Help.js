@@ -25,7 +25,7 @@ const Help = () => {
             <strong>Q: How do I contact customer support?</strong>
             <p>
               A: You can reach out to us via the contact form or email us at
-              support@example.com.
+              support@Yazideco.com.
             </p>
           </li>
         </ul>

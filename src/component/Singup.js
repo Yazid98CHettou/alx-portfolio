@@ -1,11 +1,15 @@
 import React from "react";
 import "../component/componentCSS/Singup.css"; // Import the CSS file
+import Image from "../image/Login.png";
 
 const Singup = () => {
   return (
     <div className="signup-container">
       <h2>Create an Account</h2>
       <form>
+      <div className="form-group">
+          <img src={Image} alt=""></img>
+        </div>
         <div className="form-group">
           <label htmlFor="username">Uername</label>
         </div>
@@ -28,6 +32,7 @@ const Singup = () => {
         <button type="submit" className="signup-button">
           Sign Up
         </button>
+        
       </form>
     </div>
   );

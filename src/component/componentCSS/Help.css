@@ -2,11 +2,12 @@
   max-width: 600px;
   margin: 50px auto;
   padding: 20px;
-  border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #f9f9f9;
   font-family: Arial, sans-serif;
+  background-color: rgba(255, 252, 252, 0.5);
+  border: none;
 }
 
 .help-container h2 {
@@ -18,7 +19,7 @@
 .help-container p {
   text-align: center;
   margin-bottom: 20px;
-  color: #555;
+  color: #000;
 }
 
 .faq-list {
@@ -28,7 +29,7 @@
 
 .faq-list li {
   margin-bottom: 15px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #000;
   padding-bottom: 10px;
 }
 
@@ -40,7 +41,7 @@
 
 .faq-list p {
   margin: 0;
-  color: #666;
+  color: #000;
 }
 
 .contact-button {
@@ -54,6 +55,7 @@
   font-size: 16px;
   cursor: pointer;
   margin-top: 20px;
+  border-radius: 20px;
 }
 
 .contact-button:hover {
