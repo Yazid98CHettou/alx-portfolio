@@ -32,7 +32,7 @@ const Nav = () => {
             {/*Second Item */}
             <li className="menu-item">
               <i className="fas fa-shopping-cart" />
-              <Link   className="menu-text" to="/Shopping">shopping-cart</Link>
+              <Link   className="menu-text" to="/ShoppingCart">shopping-cart</Link>
             </li>
             {/*3 Item */}
             <li className="menu-item">

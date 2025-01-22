@@ -3,7 +3,6 @@ import React from "react";
 import Image from "../image/bureau.png";
 import { useNavigate } from "react-router-dom";
 import "../component/Nav";
-
 function Home() {
   const navigate = useNavigate();
 
@@ -13,8 +12,8 @@ function Home() {
   const Keyboard = () => {
     navigate("/Keyboard");
   };
-  const Time = () => {
-    navigate("/Time");
+  const Clock = () => {
+    navigate("/Clock");
   };
   const Mouse = () => {
     navigate("/Mouse");
@@ -61,7 +60,7 @@ function Home() {
           title="Time"
           coords="445,246,24"
           shape="circle"
-          onClick={Time}
+          onClick={Clock}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         />
