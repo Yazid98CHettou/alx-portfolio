@@ -7,7 +7,6 @@ import { CartContext } from "../context/CartContext"; // Assuming this is the co
 
 const Keyboard = () => {
   const { addToCart } = useContext(CartContext); // Use the CartContext for adding to the cart
-  const formattedPrice =  Number(price).toFixed(2);
   const [showMessage, setShowMessage] = useState(false);
   const [message, setMessage] = useState(""); // Dynamic message to show which product was added
 
@@ -32,8 +31,8 @@ const Keyboard = () => {
     {
       id: 2,
       name: "Logitech K120 USB Keyboard",
-      price: 2149.00,
-      oldPrice: 1234.00,
+      price: 2149.09,
+      oldPrice: 3599.09,
       image: Logitech,
       description: [
         "Wired USB",
@@ -44,6 +43,7 @@ const Keyboard = () => {
         "Compatible with Windows XP and Later",
         "Compatible with Linux",
       ],
+      discount: 1450.00,
     },
   ];
   const handleAddToCart = (product) => {
@@ -61,10 +61,10 @@ const Keyboard = () => {
     <>
       <div className="container mt-5">
         {products.map((product) => (
-          <div key={product.id} className="row border-0 p-3 rounded">
+          <div className="row border-0 p-3 rounded" key={product.id}>
             {/* First Column: Picture */}
             <div className="col-md-3 text-center">
-            {showMessage && (
+              {showMessage && (
                 <div
                   style={{
                     position: "fixed",
@@ -80,12 +80,16 @@ const Keyboard = () => {
                   {message}
                 </div>
               )}
-              <img src={product.image} alt="Product" className="img-fluid" />
+              <img
+                src={product.image}
+                alt={product.name}
+                className="img-fluid"
+              />
             </div>
             <div className="col-md-6">
               <h3>{product.name}</h3>
               <div>
-                <span className="badge bg-secondary">{product.badge}</span>
+                <span className="badge bg-secondary">Top Seller</span>
               </div>
               <p className="mt-2">
                 <strong>Key Features</strong>
@@ -99,7 +103,15 @@ const Keyboard = () => {
             <div className="col-md-3 text-center">
               <h4 className="text-danger">${isNaN(product.price) ? '0.00' : product.price.toFixed(2)}</h4>
               <p>
-                <small className="text-muted">{product.availability}</small>
+                <small>
+                  <s>${isNaN(product.oldPrice) ? '0.00' : product.oldPrice.toFixed(2)}</s>
+                </small>
+              </p>
+              <p className="text-success">Save Reg. ${isNaN(product.discount) ? '0.00' : product.discount.toFixed(2)}</p>
+              <p>
+                <small className="text-muted">
+                  Limited supply at this price
+                </small>
               </p>
               <button
                 className="btn btn-success w-100"
@@ -111,7 +123,9 @@ const Keyboard = () => {
                 Add to Wish List
               </button>
             </div>
-            <div> ____________________________________________________________________________________________________________________________________________________________________</div>
+            <div>
+              ____________________________________________________________________________________________________________________________________________________________________
+            </div>
           </div>
         ))}
       </div>

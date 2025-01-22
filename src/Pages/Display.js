@@ -2,10 +2,9 @@ import React, { useContext, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import "../pages/PagesCSS/Display.css";
-import Mac from "../image/Mac.png"; 
-import MacBook from "../image/MacBook.png"; 
+import Mac from "../image/Mac.png";
+import MacBook from "../image/MacBook.png";
 import { CartContext } from "../context/CartContext"; // Assuming this is the context for the cart
-
 const Display = () => {
   const { addToCart } = useContext(CartContext); // Use the CartContext for adding to the cart
   const [showMessage, setShowMessage] = useState(false);
@@ -14,24 +13,27 @@ const Display = () => {
   const products = [
     {
       id: 1,
-      name: "Apple 15\" MacBook Air (M3, Midnight)",price: 2149.00,oldPrice: 2499.00,image: Mac,
+      name: 'Apple 15" MacBook Air (M3, Midnight)',
+      price: 2149.0,
+      oldPrice: 2499.0,
+      image: Mac,
       description: [
         "Apple M3 8-Core Chip",
         "24GB Unified RAM | 2TB SSD",
-        "15.3\" 2880 x 1864 Liquid Retina Display",
+        '15.3" 2880 x 1864 Liquid Retina Display',
         "10-Core GPU | 16-Core Neural Engine",
         "Wi-Fi 6E (802.11ax) | Bluetooth 5.3",
         "2 x Thunderbolt | USB 4",
         "Force Touch Trackpad | Touch ID Sensor",
-        "macOS"
+        "macOS",
       ],
-      discount: "Save Reg. $1,867.94",
+      discount: 350.0,
     },
     {
       id: 2,
       name: "Apple 24 iMac with M4 Chip (Blue)",
-      price: 1849.00,
-      oldPrice: 2499.00,
+      price: 1849.0,
+      oldPrice: 2499.0,
       image: MacBook,
       description: [
         "Apple M4 8-Core Chip",
@@ -40,10 +42,10 @@ const Display = () => {
         "8-Core GPU | 16-Core Neural Engine",
         "Wi-Fi 6 | Bluetooth 5.0",
         "2 x Thunderbolt | USB 4",
-        "macOS"
+        "macOS",
       ],
-      discount: "Save Reg. $650.00",
-    }
+      discount: 650.0,
+    },
   ];
   const handleAddToCart = (product) => {
     addToCart(product); // Add the product to the cart (context or logic)
@@ -57,6 +59,7 @@ const Display = () => {
   };
   return (
     <>
+    
       <div className="container mt-5">
         {products.map((product) => (
           <div className="row border-0 p-3 rounded" key={product.id}>
@@ -78,7 +81,11 @@ const Display = () => {
                   {message}
                 </div>
               )}
-              <img src={product.image} alt={product.name} className="img-fluid" />
+              <img
+                src={product.image}
+                alt={product.name}
+                className="img-fluid"
+              />
             </div>
             <div className="col-md-6">
               <h3>{product.name}</h3>
@@ -95,13 +102,23 @@ const Display = () => {
               </ul>
             </div>
             <div className="col-md-3 text-center">
-              <h4 className="text-danger">${product.price.toFixed(2)}</h4>
+              <h4 className="text-danger">
+                ${isNaN(product.price) ? "0.00" : product.price.toFixed(2)}
+              </h4>
               <p>
                 <small>
-                  <s>${product.oldPrice.toFixed(2)}</s>
+                  <s>
+                    $
+                    {isNaN(product.oldPrice)
+                      ? "0.00"
+                      : product.oldPrice.toFixed(2)}
+                  </s>
                 </small>
               </p>
-              <p className="text-success">Save Reg. ${product.discount}</p>
+              <p className="text-success">
+                Save Reg. $
+                {isNaN(product.discount) ? "0.00" : product.discount.toFixed(2)}
+              </p>
               <p>
                 <small className="text-muted">
                   Limited supply at this price
@@ -117,7 +134,9 @@ const Display = () => {
                 Add to Wish List
               </button>
             </div>
-            <div> ____________________________________________________________________________________________________________________________________________________________________</div>
+            <div>
+              ____________________________________________________________________________________________________________________________________________________________________
+            </div>
           </div>
         ))}
       </div>
@@ -217,4 +236,3 @@ export default Display;
       </div>
 
 */
-

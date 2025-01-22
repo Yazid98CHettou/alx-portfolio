@@ -1,8 +1,10 @@
 // Home.js
-import React from "react";
+import React, { useState } from "react";
 import Image from "../image/bureau.png";
 import { useNavigate } from "react-router-dom";
 import "../component/Nav";
+import PopUp from "../component/PopUp";
+
 function Home() {
   const navigate = useNavigate();
 
@@ -28,9 +30,23 @@ function Home() {
   const handleMouseLeave = () => {
     document.body.style.cursor = "default"; // Reset cursor to default
   };
+  const [showPopUp, setShowPopUp] = useState(true);
 
+  const closePopUp = () => {
+    setShowPopUp(false);
+  };
   return (
     <>
+      <div>
+        {showPopUp && (
+          <PopUp
+            message="Hover over the product you want to view.
+                    .مرر الماوس فوق المنتج الذي تريد عرضه."
+            onClose={closePopUp}
+          />
+        )}
+        {/* Your other content goes here */}
+      </div>
       <img src={Image} className="Desktop" useMap="#image-map" alt="" />
       <map name="image-map">
         <area
