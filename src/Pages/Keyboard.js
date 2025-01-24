@@ -4,7 +4,9 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import Logitec from "../image/Logitech.png";
 import Logitech from "../image/logitech2.png";
 import { CartContext } from "../context/CartContext"; // Assuming this is the context for the cart
+import Navbar from "../component/Navbar"; // Adjust the path if necessary
 
+      
 const Keyboard = () => {
   const { addToCart } = useContext(CartContext); // Use the CartContext for adding to the cart
   const [showMessage, setShowMessage] = useState(false);
@@ -59,6 +61,9 @@ const Keyboard = () => {
 
   return (
     <>
+    <center>
+        <Navbar />
+      </center>
       <div className="container mt-5">
         {products.map((product) => (
           <div className="row border-0 p-3 rounded" key={product.id}>

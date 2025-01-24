@@ -1,0 +1,52 @@
+/* Navbar.css */
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 465px;
+  height: 50px;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 50px;
+  transform: translateX(-50%);
+  animation: colorChange 5s infinite; /* Animation that lasts 5 seconds, infinite loop */
+}
+
+@keyframes colorChange {
+  0% {
+    background-color: #333;  /* Dark Gray */
+  }
+  25% {
+    background-color: #ff6347;  /* Tomato */
+  }
+  50% {
+    background-color: #4682b4;  /* Steel Blue */
+  }
+  75% {
+    background-color: #32cd32;  /* Lime Green */
+  }
+  100% {
+    background-color: #333;  /* Dark Gray (back to start) */
+  }
+}
+
+.navbar-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-item {
+  margin: 0 15px;
+}
+
+.navbar-link {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.navbar-link:hover {
+  text-decoration: none;
+}

@@ -5,6 +5,8 @@ import "../pages/PagesCSS/Display.css";
 import Mac from "../image/Mac.png";
 import MacBook from "../image/MacBook.png";
 import { CartContext } from "../context/CartContext"; // Assuming this is the context for the cart
+import Navbar from "../component/Navbar"; // Adjust the path if necessary
+
 const Display = () => {
   const { addToCart } = useContext(CartContext); // Use the CartContext for adding to the cart
   const [showMessage, setShowMessage] = useState(false);
@@ -57,9 +59,13 @@ const Display = () => {
       setShowMessage(false);
     }, 3000);
   };
+
   return (
     <>
-    
+
+      <center>
+        <Navbar />
+      </center>
       <div className="container mt-5">
         {products.map((product) => (
           <div className="row border-0 p-3 rounded" key={product.id}>

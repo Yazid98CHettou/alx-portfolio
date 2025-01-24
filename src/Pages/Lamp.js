@@ -8,6 +8,7 @@ import Silver from "../image/Silver.png";
 import Gold from "../image/Gold.png";
 import Lamp2 from "../image/Lamp2.png";
 import { CartContext } from "../context/CartContext"; // Assuming this is the context for the cart
+import Navbar from "../component/Navbar"; // Adjust the path if necessary
 
 const Lamp = () => {
   const { addToCart } = useContext(CartContext); // Use the CartContext for adding to the cart
@@ -96,6 +97,9 @@ const Lamp = () => {
 
   return (
     <>
+      <center>
+        <Navbar />
+      </center>
       <div className="container mt-5">
         {products.map((product) => (
           <div className="row border-0 p-3 rounded" key={product.id}>

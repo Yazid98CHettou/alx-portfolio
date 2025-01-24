@@ -17,7 +17,7 @@ const Singup = () => {
           <input type="text" id="username" placeholder="Enter your username" />
         </div>
         <div className="form-group">
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email ">Email</label>
         </div>
         <div className="form-group">
           <input type="email" id="email" placeholder="Enter your email" />

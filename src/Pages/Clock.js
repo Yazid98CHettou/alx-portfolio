@@ -4,7 +4,9 @@ import Mac from "../image/Mac.png";
 import { CartContext } from "../context/CartContext"; // Assuming this is the context for the cart
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
+import Navbar from "../component/Navbar"; // Adjust the path if necessary
 
+      
 const Clock = () => {
   const { addToCart } = useContext(CartContext); // Use the CartContext for adding to the cart
   const [showMessage, setShowMessage] = useState(false);
@@ -90,6 +92,9 @@ const Clock = () => {
   };
   return (
     <>
+    <center>
+        <Navbar />
+      </center>
       <div className="container mt-5">
         {products.map((product) => (
           <div key={product.id} className="row border-0 p-3 rounded">

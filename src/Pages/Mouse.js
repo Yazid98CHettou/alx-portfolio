@@ -6,6 +6,7 @@ import LogitechM2 from "../image/LogitechM2.png";
 import LogitechM3 from "../image/LogitechM4.png";
 import Apple from "../image/Apple.png";
 import { CartContext } from "../context/CartContext"; // Assuming this is the context for the cart
+import Navbar from "../component/Navbar"; // Adjust the path if necessary
 
 const Mouse = () => {
   const { addToCart } = useContext(CartContext); // Use the CartContext for adding to the cart
@@ -83,6 +84,9 @@ const Mouse = () => {
 
   return (
     <>
+      <center>
+        <Navbar />
+      </center>
       <div className="container mt-5">
         {products.map((product) => (
           <div className="row border-0 p-3 rounded" key={product.id}>

@@ -15,6 +15,7 @@ import Lamp from "./pages/Lamp";
 import Clock from "./pages/Clock";
 import { CartProvider } from "./context/CartContext";
 import ShoppingCart from "./pages/ShoppingCart";
+
 function App() {
   return (
     <CartProvider>

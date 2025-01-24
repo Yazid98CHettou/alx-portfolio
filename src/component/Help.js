@@ -1,6 +1,30 @@
-import React from "react";
-import "../component/componentCSS/Help.css"
+import React, { useState } from "react";
+import "../component/componentCSS/Help.css";
+
 const Help = () => {
+  // State to control the visibility of the popup
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  // Open popup when contact button is clicked
+  const handleOpenPopup = () => {
+    setIsPopupOpen(true);
+  };
+
+  // Close popup
+  const handleClosePopup = () => {
+    setIsPopupOpen(false);
+  };
+
+  // Handle form submit (for example, display data)
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
+    handleClosePopup(); // Close the popup after submission
+  };
+
   return (
     <>
       <div className="help-container">
@@ -29,8 +53,57 @@ const Help = () => {
             </p>
           </li>
         </ul>
-        <button className="contact-button">Contact Support</button>
+        <button className="contact-button" onClick={handleOpenPopup}>
+          Contact Support
+        </button>
       </div>
+
+      {/* Popup Form */}
+      {isPopupOpen && (
+        <div className="popup">
+          <div className="popup-content">
+            <h3>Contact Support</h3>
+            <form onSubmit={handleSubmit}>
+              <div className="form-group">
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  className="popup-input"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                />
+              </div>
+              <div className="form-group">
+                <input
+                  type="email"
+                  placeholder="Your Email"
+                  className="popup-input"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </div>
+              <div className="form-group">
+                <textarea
+                  placeholder="Your Message"
+                  className="popup-textarea"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                ></textarea>
+              </div>
+              <button type="submit" className="submit-button">
+                Submit
+              </button>
+              <button
+                type="button"
+                className="close-button"
+                onClick={handleClosePopup}
+              >
+                Close
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
     </>
   );
 };
