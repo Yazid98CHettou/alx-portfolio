@@ -71,9 +71,9 @@ function Home() {
         />
         <area
           className="Time"
-          target="Time"
-          alt="Time"
-          title="Time"
+          target="Clock"
+          alt="Clock"
+          title="Clock"
           coords="445,246,24"
           shape="circle"
           onClick={Clock}

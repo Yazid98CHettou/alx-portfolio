@@ -1,6 +1,9 @@
 import React, { useContext, useState } from "react";
 import Clock1 from "../image/Clock.png";
-import Mac from "../image/Mac.png";
+import JBL from "../image/JBL.png";
+import Amazon from "../image/Amazon.png";
+import SONY from "../image/SONY.png";
+
 import { CartContext } from "../context/CartContext"; // Assuming this is the context for the cart
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
@@ -24,60 +27,54 @@ const Clock = () => {
         "Month/Date Display",
         "Night Light",
       ],
-      discount: "Limited supply at this price",
     },
     {
       id: 2,
-      name: "Explore Scientific Large Display Radio Controlled Alarm Clock (White)",
-      price: 19.97,
-      image: Clock1, // Ensure you import the image Clock1 in your component
+      name: "JBL Horizon 2 Clock Radio with Bluetooth (Gray)",
+      price: 119.95,
+      image: JBL, // Ensure you import the image Clock1 in your component
       description: [
-        "Alarm & Snooze",
-        "White LED Backlight",
-        "Month/Date Display",
-        "Night Light",
+        "Bluetooth Wireless Music Streaming",
+        "Dual 1.5 Full-Range Drivers",
+        "Dual Alarms",
+        "LCD with Ambient Light Sensor",
+        "3.5mm Aux Input",
+        "Two USB Charging Ports",
+        "Built-In FM Tuner",
+        "Battery Backup",
+        "Ambient Light for Nightlight Use",
       ],
-      discount: "Limited supply at this price",
     },
     {
       id: 3,
-      name: "JBL Horizon 2 Clock Radio with Bluetooth (Gray)",
-      price: 1849.0,
-      oldPrice: 1867.94,
-      image: Mac, // Ensure you import the Mac image correctly in your component
+      name: "Sony Radio Alarm Clock (Black)",
+      price: 29.95,
+      image: SONY, // Ensure you import the Mac image correctly in your component
       description: [
-        "Apple M4 10-Core CPU",
-        "24GB Unified RAM | 512GB SSD",
-        '24" 4480 x 2520 Retina Display',
-        "10-Core GPU | 16-Core Neural Engine",
-        "P3 Color Gamut | True Tone Technology",
-        "Wi-Fi 6E (802.11ax) | Bluetooth 5.3",
-        "4 x Thunderbolt 4 | GbE RJ45 | 3.5mm",
-        "12MP Center Stage Camera",
-        "Includes Magic Keyboard & Magic Mouse",
+        "FM/AM Radio Tuner",
+        "Gradual Wake Alarm",
+        "Extendable Snooze",
+        "AC Powered",
+        "Includes Backup Battery",
       ],
-      discount: "Save Reg. $1,867.94",
-      availability: "Limited supply at this price",
     },
     {
       id: 4,
-      name: "Sangean RCR-30 Bluetooth AM/FM Alarm Clock Radio with Sound Soother",
-      price: 1849.0,
-      oldPrice: 1867.94,
-      image: Mac, // Ensure you import the Mac image correctly in your component
+      name: "Amazon Echo Spot Smart Alarm Clock (2024 Edition, Ocean Blue)",
+      price: 79.99,
+      image: Amazon, // Ensure you import the Mac image correctly in your component
       description: [
-        "Apple M4 10-Core CPU",
-        "24GB Unified RAM | 512GB SSD",
-        '24" 4480 x 2520 Retina Display',
-        "10-Core GPU | 16-Core Neural Engine",
-        "P3 Color Gamut | True Tone Technology",
-        "Wi-Fi 6E (802.11ax) | Bluetooth 5.3",
-        "4 x Thunderbolt 4 | GbE RJ45 | 3.5mm",
-        "12MP Center Stage Camera",
-        "Includes Magic Keyboard & Magic Mouse",
+        "Add Alexa to Your Nightstand",
+        "Create Alarms, Reminders & Routines",
+        'Control Smart Home Devices',
+        "Listen to Music, Podcasts & Audiobooks",
+        '2.8" Color Display & Built-In Speaker',
+        "View Time, Date & Weather At-a-Glance",
+        "Dual-Band Wi-Fi 5 (802.11ac) & Bluetooth",
+        "Multiple Layers of Privacy Control",
+        "Hands-Free Voice Calls & Announcements",
+        "Easy Setup with App & Included Adapter",
       ],
-      discount: "Save Reg. $1,867.94",
-      availability: "Limited supply at this price",
     },
   ];
   const handleAddToCart = (product) => {
